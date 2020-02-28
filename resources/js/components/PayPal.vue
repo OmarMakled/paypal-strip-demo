@@ -22,14 +22,14 @@ export default {
           },
           payment: function(data, actions) {
             return actions.request
-              .post("/api/payments/create")
+              .post("/api/paypal/create")
               .then(function(res) {
                 return res.id;
               });
           },
           onAuthorize: function(data, actions) {
             return actions.request
-              .post("/api/payments/execute", {
+              .post("/api/paypal/execute", {
                 paymentID: data.paymentID,
                 payerID: data.payerID
               })

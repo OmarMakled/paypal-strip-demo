@@ -1929,12 +1929,12 @@ __webpack_require__.r(__webpack_exports__);
           shape: "pill"
         },
         payment: function payment(data, actions) {
-          return actions.request.post("/api/payments/create").then(function (res) {
+          return actions.request.post("/api/paypal/create").then(function (res) {
             return res.id;
           });
         },
         onAuthorize: function onAuthorize(data, actions) {
-          return actions.request.post("/api/payments/execute", {
+          return actions.request.post("/api/paypal/execute", {
             paymentID: data.paymentID,
             payerID: data.payerID
           }).then(function (res) {
