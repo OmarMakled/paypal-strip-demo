@@ -11,11 +11,9 @@
     <script>
         window.app = {
             paypal: {
-                env: '{{config('
-                services.paypal.env ')}}'
+                env: "{{config('services.paypal.env')}}"
             }
         }
-
     </script>
 </head>
 
